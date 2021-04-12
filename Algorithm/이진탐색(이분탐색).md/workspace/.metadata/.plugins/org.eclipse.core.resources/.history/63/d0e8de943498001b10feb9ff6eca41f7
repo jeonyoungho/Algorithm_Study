@@ -1,0 +1,18 @@
+public class TestMain {
+
+	private static final int num = 10;
+	
+	public static void main(String[] args) {
+		
+		
+		int[] arr = new int[num];
+		for(int i=0;i<num;i++) {
+			arr[i] = i;
+		}
+		
+		int start = 0;
+		int end = num;
+		
+	}
+
+}

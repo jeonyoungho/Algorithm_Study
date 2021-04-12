@@ -1,0 +1,13 @@
+
+public class TestMain2 {
+
+	private final static int NODE_NUM = 6;
+	
+	public static void main(String[] args) {
+		
+		
+	}
+	
+	
+
+}

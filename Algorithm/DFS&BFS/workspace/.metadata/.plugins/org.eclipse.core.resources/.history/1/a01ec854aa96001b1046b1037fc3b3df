@@ -1,0 +1,52 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Graph {
+	
+	private int nodeCount;
+	private LinkedList<Integer>[] adj;
+	
+	public Graph() {
+		this(10);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public Graph(int nodeCount) {
+		this.nodeCount = nodeCount;
+		adj = new LinkedList[nodeCount];
+	}
+	
+	public void addEdge(int v, int w) {
+		adj[v].add(w);
+	}
+	
+	private void BFS(int v, boolean[] isVisited) {
+		
+		// 방문한 노드들을 보관하기 위한 큐
+		Queue<Integer> queue = new LinkedList<Integer>();
+		
+		isVisited[v] = true;
+		queue.offer(v);
+		
+		while(queue.size() > 0) {
+			int node = queue.poll();
+			System.out.println(node + " ");
+			if(isVisited[node] == false) {
+				LinkedList<Integer> list = adj[node];
+				for(Integer n:list) {
+					isVisited[n] = true;
+					queue.offer(n);
+				}
+			}
+		}
+		
+	}
+	
+	public void startBFS(int v) {
+		boolean[] isVisited = new boolean[nodeCount];
+		
+		BFS(v, isVisited);
+	}
+
+}

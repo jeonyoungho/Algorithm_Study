@@ -1,0 +1,19 @@
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		
+		int[] parent = new int[6];
+		
+		// TODO Auto-generated method stub
+		System.out.println("helo");
+	}
+	
+	private int find(int[] parent, int v) {
+		if(parent[v] == v)
+			return parent[v];
+		
+		return parent[v] = find(parent, parent[v]);
+	}
+
+}
