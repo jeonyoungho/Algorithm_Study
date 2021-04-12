@@ -1,0 +1,14 @@
+
+public class MainTest {
+
+	@Test
+
+	void weak() {
+
+		PasswordMeter meter = new PasswordMeter();
+
+		assertEquals(PasswordLevel.WEAK, meter.meter("1234"));
+
+	}
+
+}

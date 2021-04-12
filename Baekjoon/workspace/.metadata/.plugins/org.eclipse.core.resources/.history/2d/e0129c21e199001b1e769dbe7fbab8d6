@@ -1,0 +1,13 @@
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+
+public class MainTest {
+
+	@ParameterizedTest
+	
+	void weak() {
+
+		System.out.println("hello");
+	}
+
+}
