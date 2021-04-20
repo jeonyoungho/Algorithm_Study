@@ -11,8 +11,8 @@
 ### 공부 순서
 - 1)그리디, 기본 동적 프로그래밍, 탐색 문제(완전 탐색, BFS, DFS) 각각 50개씩 풀어보기
     - 아래에 있는 문제들부터 먼저 풀어볼 것
-    - https://code.plus/course/41 (카드 구매하기 까지 완료)
-    - https://code.plus/course/42 (ABCDE 까지 완료)
+    - https://code.plus/course/41 (1,2,3더하기5 까지 완료)
+    - https://code.plus/course/42 (BFS와DFS 까지 완료)
     - https://code.plus/course/43
     - https://code.plus/course/44
     - https://code.plus/course/45
