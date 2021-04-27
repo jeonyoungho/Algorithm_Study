@@ -1,63 +1,76 @@
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.Map.Entry;
-import java.util.TreeMap;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.PriorityQueue;
 
-public class Main {
-	
-	public static void main(String[] args) {
-		TreeMap<Integer,String> treeMap1 = new TreeMap<Integer,String>() {{	//초기값 설정
-		    put(1,"사과");
-		}};
-		TreeMap<Integer, String> treeMap2 = new TreeMap<>(treeMap1); //treeMap1의 모든 값을 가진 TreeMap생성
-		treeMap2.put(2, "복숭아"); //값 추가
-		treeMap2.put(3, "수박"); //값 추가
-		TreeMap<Integer,String> treeMap3 = new TreeMap<>(treeMap2);//treeMap2의 모든 값을 가진 TreeMap생성
+public class PriorityQueueTest {
+
+			static class FileInfo implements Comparable<FileInfo> {
+		        private String head;
+		        private String number;
+		        private String tail;
+		        
+		        public FileInfo(String fileName) {
+		            StringBuilder headerSb = new StringBuilder();
+		            StringBuilder numberSb = new StringBuilder();
+		            boolean isNumber = false;
+		            int numCnt = 0;
+		            int pos = 0;
+		            for(int i=0;i<fileName.length();i++) {
+		                char ch = fileName.charAt(i);
+		                if(numCnt < 5 && Character.isDigit(ch)) {
+		                    numberSb.append(String.valueOf(ch));
+		                    isNumber = true;
+		                    numCnt++;
+		                } else if (numCnt >= 5 || isNumber == true) {
+		                  break;  
+		                } else { // 숫자가 아니면 StringBuilder 담아서 head에 저장
+		                    headerSb.append(String.valueOf(ch));
+		                }
+		                
+		                pos = i;
+		            }
 		
-		TreeMap<Integer,String> treeMap4 = new TreeMap<>(Collections.reverseOrder());//key의 역순형태로 저장하는 TreeMap생성
-		treeMap4.put(4, "바나나");
-		treeMap4.put(5, "배");
+		            this.head = headerSb.toString();
+		            this.number = numberSb.toString();
+		            this.tail = fileName.substring(pos+1, fileName.length());
+		        }
+		        
+		        public int compareTo(FileInfo f) {
+		            
+		            if (this.head.toLowerCase().equals(f.head.toLowerCase())) {
+		                int num1 = Integer.parseInt(this.number);
+		                int num2 = Integer.parseInt(f.number);
+		                return num1 - num2;
+		            }
+		            
+		            return this.head.toLowerCase().compareTo(f.head.toLowerCase());
+		        }
+		        
+		        @Override
+		        public String toString() {
+		            return this.head + "" + this.number + "" + this.tail;
+		        }
+		        
+		    }
+			
+		    public static void main1(String[] args) {
+		    	String[] files = {"ABC12", "AbC12", "aBc12"};
+		        
+		    	PriorityQueue<FileInfo> pq = new PriorityQueue<>();
+		        for(String fileName:files) {
+		            pq.add(new FileInfo(fileName));
+		        }
+		        
+		        ArrayList<String> resList = new ArrayList<String>();
+		        while(!pq.isEmpty()) {
+		            FileInfo fileInfo = pq.poll();
+		            System.out.println(pq.toString());
+		            resList.add(fileInfo.head+fileInfo.number+fileInfo.tail);
+		        }
+		        
+		        String[] answer = resList.toArray(new String[resList.size()]);
+		        
+		        System.out.println(Arrays.toString(answer));
+		    }
 		
-		treeMap1.clear(); //모든 값 제거
-		treeMap2.remove(1); //key값 1 제거
-		
-		System.out.println("treeMap1 size: " + treeMap1.size());
-		System.out.println("treeMap2 size: " + treeMap2.size());
-		System.out.println("treeMap3 size: " + treeMap3.size());
-		
-		System.out.println("Print all data in treeMap3: " + treeMap3);
-		System.out.println("Print all data in treeMap4: " + treeMap4);
-		System.out.println("Print date with key 2 in treeMap3: " + treeMap3.get(2));
-		System.out.println("Print first entry in treeMap3: " + treeMap3.firstEntry());
-		System.out.println("Print first key in treeMap3: " + treeMap3.firstKey());
-		System.out.println("Print last entry in treeMap3: " + treeMap3.lastEntry());
-		System.out.println("Print last key in treeMap3: " + treeMap3.lastKey());
-		
-		System.out.println("===== [Entry] Print all data with for loop =====");
-		for(Entry<Integer, String> entry : treeMap3.entrySet()) {
-			System.out.println("[key]: " + entry.getKey() + ", [value]: " + entry.getValue());
-		}
-		
-		System.out.println("===== [Key] Print all data with for loop =====");
-		for(Integer i:treeMap3.keySet()) {
-			System.out.println("[key]: " + i + ", [value]: " + treeMap3.get(i));
-		}
-		
-		System.out.println("===== [entry iterator] Print all data with while loop =====");
-		Iterator<Entry<Integer, String>> iter = treeMap3.entrySet().iterator();
-		while(iter.hasNext()) {
-			Entry<Integer, String> entry = iter.next();
-			System.out.println("[key]: " + entry.getKey() + ", [value]: " + entry.getValue());
-		}
-		
-		
-		System.out.println("===== [key iterator] Print all data with while loop =====");
-		Iterator<Integer> iter2 = treeMap3.keySet().iterator();
-		while(iter2.hasNext()) {
-			int i = iter2.next();
-			System.out.println("[key]: " + i + ", [value]: " + treeMap3.get(i));
-		}
-		
-	}
-	
 }
