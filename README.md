@@ -12,7 +12,7 @@
 - 1)그리디, 기본 동적 프로그래밍, 탐색 문제(완전 탐색, BFS, DFS) 각각 50개씩 풀어보기
     - 아래에 있는 문제들부터 먼저 풀어볼 것
     - https://code.plus/course/41
-        - 가장 긴 증가하는 부분 순열 까지 완료
+        - 가장 긴 증가하는 부분 순열4 까지 완료
     - https://code.plus/course/42
         - 이분 그래프 까지 완료
     - https://code.plus/course/43
@@ -23,3 +23,4 @@
 
 #### 참고 사이트
 - https://sowon-dev.github.io/2020/09/28/200929codingTest/
+- https://velog.io/@cmplxn/%EA%B8%B0%EC%97%85%EC%9A%A9-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A4%80%EB%B9%84%ED%95%98%EA%B8%B0-%EC%A3%BC%EC%A0%9C
