@@ -1,8 +1,5 @@
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.PriorityQueue;
 
 public class AdvertiseTest {
@@ -75,7 +72,7 @@ public class AdvertiseTest {
 		return answer;
 	}
 
-	public static void main(String[] args) {
+	public static void main1(String[] args) {
 		int[][] ans = {{1,2}, {3,2}, {5,4}, {16, 3}};
 		System.out.println(solution(ans));
 		
