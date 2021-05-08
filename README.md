@@ -19,7 +19,7 @@
     - https://code.plus/course/44
     - https://code.plus/course/45
 
-- 2)백준에 있는 나머지 문제들을 계속 풀어보기
+- 2)백준에 있는 나머지 문제들을 계속 풀기
 
 #### 참고 사이트
 - https://sowon-dev.github.io/2020/09/28/200929codingTest/
