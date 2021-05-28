@@ -1,10 +1,3 @@
-# [15988]1,2,3더하기3
-
-### 설명
-- 1,2,3더하기1과 같은 유형이지만, n이 100만인 점과 %1_000_000_009 로 나눈 값을 출력해야 한다는 점만 고려해주면 된다.
-
-### 제출 코드
-~~~
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -48,4 +41,3 @@ public class Main {
 	}
 
 }
-~~~
