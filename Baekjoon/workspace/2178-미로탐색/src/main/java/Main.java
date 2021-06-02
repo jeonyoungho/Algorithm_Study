@@ -61,14 +61,13 @@ public class Main {
 						break;
 					}
 					
-					if(targetX<0 || targetY<0 || targetX > N || targetY > M)
-						continue;
-					
-					if(visited[targetX][targetY] == false && 
-							map[targetX][targetY] == 1) {
-						queue.add(new Point(targetX, targetY));
-						found = true;
-						visited[targetX][targetY] = true;
+					if(targetX>=0 && targetY>=0 && targetX <= N && targetY <= M) {
+						if(visited[targetX][targetY] == false && 
+								map[targetX][targetY] == 1) {
+							queue.add(new Point(targetX, targetY));
+							found = true;
+							visited[targetX][targetY] = true;
+						}
 					}
 				}
 				
