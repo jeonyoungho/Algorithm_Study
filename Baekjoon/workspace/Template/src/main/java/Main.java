@@ -19,9 +19,7 @@ public class Main {
 		bw.write("");
 		bw.flush();
 		bw.close();
-
 		br.close();
-
 	}
 
 }
