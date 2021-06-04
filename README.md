@@ -15,7 +15,7 @@
     - https://code.plus/course/41
         - 포도주 시식 까지 완료
     - https://code.plus/course/42
-        - 토마토 까지 완료
+        - 나이트의 이동 까지 완료
     - https://code.plus/course/43
     - https://code.plus/course/44
     - https://code.plus/course/45
