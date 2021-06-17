@@ -15,7 +15,7 @@
         - https://code.plus/course/41
             - 가장 긴 바이토닉 부분 순열 까지 완료
         - https://code.plus/course/42
-            - 숨바꼭질4 까지 완료
+            - 알고스팟 까지 완료
         - https://code.plus/course/43
         - https://code.plus/course/44
         - https://code.plus/course/45
